@@ -78,7 +78,7 @@ export default function Companion({
       vapi.off("speech-start", onSpeechStart);
       vapi.off("speech-end", onSpeechEnd);
     };
-  }, []);
+  }, [companionId]);
 
   const toggleMicrophone = () => {
     const isMuted = vapi.isMuted();
@@ -99,7 +99,7 @@ export default function Companion({
       serverMessages: [],
     };
 
-    // @ts-ignore
+    // @ts-expect-error vapi start method expects specific parameter types that are handled by configureAssistant
     vapi.start(configureAssistant(voice, style), assistantOverrides);
   };
 
@@ -204,9 +204,11 @@ export default function Companion({
                 </p>
               );
             } else {
-              <p key={index} className="text-primary max-sm:text-sm">
-                {userName}: {message.content}
-              </p>;
+              return (
+                <p key={index} className="text-primary max-sm:text-sm">
+                  {userName}: {message.content}
+                </p>
+              );
             }
           })}
         </div>

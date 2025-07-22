@@ -27,10 +27,10 @@ export default async function NewCompanionPage() {
             height={230}
           />
           <div className="cta-badge">Upgrade your plan</div>
-          <h1>You've reached your limit</h1>
+          <h1>You&apos;ve reached your limit</h1>
           <p>
-            You've reached your companion limit. Upgrade your plan to create
-            more companions and access premium features.
+            You&apos;ve reached your companion limit. Upgrade your plan to
+            create more companions and access premium features.
           </p>
           <Link
             href="/subscription"

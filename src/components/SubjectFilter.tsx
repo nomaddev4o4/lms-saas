@@ -15,7 +15,6 @@ import { useEffect, useState } from "react";
 export default function SubjectFilter() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const query = searchParams.get("subjects") ?? "";
 
   const [subject, setSubject] = useState("");
 
@@ -36,7 +35,7 @@ export default function SubjectFilter() {
     }
 
     router.push(newUrl, { scroll: false });
-  }, [subject]);
+  }, [subject, router, searchParams]);
 
   return (
     <Select value={subject} onValueChange={setSubject}>
