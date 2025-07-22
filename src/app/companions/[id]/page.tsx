@@ -21,7 +21,7 @@ export default async function CompanionSessionPage({
   if (!name) return redirect("/companions");
 
   return (
-    <div>
+    <main>
       <article className="flex rounded-border justify-between p-6 max-md:flex-col">
         <div className="flex items-center gap-2">
           <div
@@ -54,6 +54,6 @@ export default async function CompanionSessionPage({
         userName={user.firstName}
         userImage={user.imageUrl}
       />
-    </div>
+    </main>
   );
 }
