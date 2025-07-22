@@ -213,7 +213,7 @@ export default function Companion({
           })}
         </div>
 
-        <div className="transcription-fade" />
+        <div className="transcript-fade" />
       </section>
     </section>
   );
