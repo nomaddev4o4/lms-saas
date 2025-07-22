@@ -54,7 +54,6 @@ export default function CompanionForm() {
     if (companion) {
       redirect(`/companions/${companion.id}`);
     } else {
-      console.log("Failed to create a companion");
       redirect("/");
     }
   }
